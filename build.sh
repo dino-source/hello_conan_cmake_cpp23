@@ -1,1 +1,1 @@
-conan install . -sbuild_type=Debug --build=missing;cmake -S . -B build;cmake --build build
+conan install . -sbuild_type=Debug --build=missing;cmake --preset conan-debug;cmake --build --preset conan-debug

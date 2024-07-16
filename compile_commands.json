@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/dino/dev/cpp/hello_conan_cmake_cpp23/tests",
+  "command": "/usr/bin/clang++ -DGTEST_LINKED_AS_SHARED_LIBRARY=1 -I/home/dino/dev/cpp/hello_conan_cmake_cpp23/tests/../src -I/home/dino/dev/cpp/hello_conan_cmake_cpp23/tests/tests -std=c++23 -o CMakeFiles/test_solution.dir/tests.cpp.o -c /home/dino/dev/cpp/hello_conan_cmake_cpp23/tests/tests.cpp",
+  "file": "/home/dino/dev/cpp/hello_conan_cmake_cpp23/tests/tests.cpp",
+  "output": "tests/CMakeFiles/test_solution.dir/tests.cpp.o"
+},
+{
+  "directory": "/home/dino/dev/cpp/hello_conan_cmake_cpp23/src",
+  "command": "/usr/bin/clang++   -std=c++23 -o CMakeFiles/app.dir/main.cpp.o -c /home/dino/dev/cpp/hello_conan_cmake_cpp23/src/main.cpp",
+  "file": "/home/dino/dev/cpp/hello_conan_cmake_cpp23/src/main.cpp",
+  "output": "src/CMakeFiles/app.dir/main.cpp.o"
+}
+]

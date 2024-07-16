@@ -13,7 +13,7 @@ if (BUILD_TESTING)
 find_package(GTest REQUIRED)
 set(SOURCES
     "../src/helpers.h"
-    "test.cpp")
+    "tests.cpp")
 
 add_executable(${TEST_SOLUTION} ${SOURCES})
 
@@ -23,5 +23,5 @@ include(GoogleTest)
 # Finds all the Google tests associated with the executable
 gtest_discover_tests(${TEST_SOLUTION})
 
-target_include_directories(${TEST_SOLUTION} PUBLIC "../src" "test")
+target_include_directories(${TEST_SOLUTION} PUBLIC "../src" "tests")
 endif()

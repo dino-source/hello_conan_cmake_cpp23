@@ -1,4 +1,4 @@
-# This is a small template-project to figure out how to configure Conan + CMake properly to be able to add third-party libraries fast and easy.
+This is a small template-project to figure out how to configure Conan + CMake properly to be able to add third-party libraries fast and easy.
 
 ## In this particular project a few libraries was added as an example:
 - Google Test (popular unit-test framework)

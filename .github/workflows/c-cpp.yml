@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: sh ./xbuild.sh
+    - run: conan install . -sbuild_type=Debug --build=missing;cmake --preset conan-debug;cmake --build --preset conan-debug
     - uses: actions/checkout@v4
     - name: configure
       run: ./configure

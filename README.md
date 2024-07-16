@@ -13,3 +13,9 @@ simply run xbuild.sh script from command line using command `sh ./xbuild.sh`
 - LLVM Clang 18.1.0 or higher
 - gtest 1.14 or higher
 
+## x-scripts:
+'x' stands for "execute". There are four x-scripts in the project:
+- `xconfig.sh` - this shell script is to config project (it doesn't work properly, so just don't use it)
+- `xbuild.sh` - this shell script is to build the project
+- `xapp.sh` - this shell script is to run the app
+- `xtests.sh` - this shell script is to run the tests

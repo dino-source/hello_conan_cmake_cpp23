@@ -14,6 +14,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Generate compile_commands.json
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+set(PATH_TO_GEN "~/dev/cpp/hello_conan_cmake_cpp23/build/Debug/generators")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PATH_TO_GEN})
+
 # Enable testing for this project
 include(CTest)
 

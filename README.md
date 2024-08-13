@@ -2,7 +2,7 @@
 
 This is a small template-project to figure out how to configure Conan + CMake properly to be able to add third-party libraries fast and easy.
 
-## In this particular project a few libraries was added as an example:
+## In this particular project a few libraries were added as an example:
 - [Google Test](https://github.com/google/googletest) (popular unit-test framework)
 - [libcoro](https://github.com/jbaldwin/libcoro) (C++20 coroutine library)
 

@@ -1,11 +1,13 @@
 # Ignore build artifacts:
-build
-out
-*.out
+build/
+out/
+
 app
+*.out
 
 # Ignore clangd & CMake cache/config dirs and files 
-.cache
+.cache/
+CMakeFiles/
+
 CMakeCache.txt
-CMakeFiles
 DartConfiguration.tcl

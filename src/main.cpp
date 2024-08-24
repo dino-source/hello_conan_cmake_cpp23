@@ -12,18 +12,18 @@ int main() {
     auto make_task_inline = [](uint64_t x) -> coro::task<uint64_t> { co_return x + x; };
 
     // This will block the calling thread until the created task completes.
-    // Since this task isn't scheduled on any coro::thread_pool or coro::io_scheduler
-    // it will execute directly on the calling thread.
+    // Since this task isn't scheduled on any coro::thread_pool or
+    // coro::io_scheduler it will execute directly on the calling thread.
     auto result = coro::sync_wait(make_task_inline(5));
     std::print("Inline Result = {}\n", result);
 
-    // We'll make a 1 thread coro::thread_pool to demonstrate offloading the task's
-    // execution to another thread.  We'll capture the thread pool in the lambda,
-    // note that you will need to guarantee the thread pool outlives the coroutine.
+    // We'll make a 1 thread coro::thread_pool to demonstrate offloading the
+    // task's execution to another thread.  We'll capture the thread pool in the
+    // lambda, note that you will need to guarantee the thread pool outlives the
+    // coroutine.
     coro::thread_pool tp{coro::thread_pool::options{.thread_count = 1}};
 
-    auto make_task_offload = [&tp](uint64_t x) -> coro::task<uint64_t>
-    {
+    auto make_task_offload = [&tp](uint64_t x) -> coro::task<uint64_t> {
         co_await tp.schedule(); // Schedules execution on the thread pool.
         co_return x + x;        // This will execute on the thread pool.
     };
@@ -33,4 +33,3 @@ int main() {
     result = coro::sync_wait(make_task_offload(10));
     std::print("Offload Result = {}\n", result);
 }
-
